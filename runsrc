@@ -7,6 +7,14 @@ EXT=${FILE_NAME##*.}
 OUT=$FILE_DIR/$FILE-$EXT.runsrc
 clear
 
+if [ -z "$1" ]; then
+    echo "No source file provided"
+    echo ""
+    echo "Usage: runsrc <path-to-c-or-cpp-file>"
+    echo ""
+    echo "Report issues at <https://github.com/chankruze/runsrc/issues/>"
+fi
+
 if [ ! -z "$EXT" ]; then
     case $EXT in
         c)
