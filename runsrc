@@ -8,17 +8,17 @@ OUT=$FILE_DIR/$FILE-$EXT.runsrc
 clear
 
 if [ ! -z "$EXT" ]; then
-  case $EXT in
-	c)
-		gcc $1 -o $OUT && chmod a+x $OUT && ./$OUT
-        rm -rf $OUT
-		;;
-	cpp)
-		g++ $1 -o $OUT && chmod a+x $OUT && ./$OUT
-        rm -rf $OUT
+    case $EXT in
+        c)
+            gcc $1 -o $OUT && chmod a+x $OUT && ./$OUT
+            rm -rf $OUT
         ;;
-	*)
-		echo "I can run that ;("
-		;;
-  esac
+        cpp)
+            g++ $1 -o $OUT && chmod a+x $OUT && ./$OUT
+            rm -rf $OUT
+        ;;
+        *)
+            echo "I can run that ;("
+        ;;
+    esac
 fi
