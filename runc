@@ -1,4 +1,0 @@
-#!/bin/bash
-FILE_NAME=$(basename $1 .c).runc
-gcc $1 -o $FILE_NAME && chmod a+x $FILE_NAME && ./$FILE_NAME
-rm -rf $FILE_NAME
