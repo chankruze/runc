@@ -18,7 +18,7 @@ fi
 if [ ! -z "$EXT" ]; then
     case $EXT in
         c)
-            gcc $1 -o $OUT && chmod a+x $OUT && ./$OUT
+            gcc $1 -o $OUT -lm && chmod a+x $OUT && ./$OUT
             rm -rf $OUT
         ;;
         cpp)
